@@ -2,12 +2,12 @@
 This function if for Time Calculation(MM)
 (ex)
   add_MM(45, 10) => [
-    55,  // Minute after treatment
-    0,   // Carry over for hours
+      55,  // Minute after treatment
+       0,  // Carry over for hours
   ]
   add_MM(45, 30) => [
-    15,  // Minute after treatment
-    1,   // Carry over for hours
+      15,  // Minute after treatment
+       1,  // Carry over for hours
   ]
 '''
 
@@ -66,84 +66,84 @@ Main function
 
 (ex)
   add_time('11:00 AM', '0:05') => [
-   11,  // Hour after treatment
-    5,  // Minute after treatment
-    0,  // Number of crossing the date
-    0,  // Number of switches between AM and PM
+      11, // Hour after treatment
+      5,  // Minute after treatment
+      0,  // Number of crossing the date
+      0,  // Number of switches between AM and PM
   ] => '11:05 AM'
   
 (ex)
   add_time('11:00 AM', '10:05') => [
-    9,  // Hour after treatment
-    5,  // Minute after treatment
-    0,  // Number of crossing the date
-    1,  // Number of switches between AM and PM
+      9,  // Hour after treatment
+      5,  // Minute after treatment
+      0,  // Number of crossing the date
+      1,  // Number of switches between AM and PM
   ] => '9:05 PM'
   
 (ex)
   add_time('11:00 AM', '20:05') => [
-    7,  // Hour after treatment
-    5,  // Minute after treatment
-    1,  // Number of crossing the date
-    2,  // Number of switches between AM and PM
+      7,  // Hour after treatment
+      5,  // Minute after treatment
+      1,  // Number of crossing the date
+      2,  // Number of switches between AM and PM
   ] => '7:05 AM (next day)'
   
 (ex)
   add_time('11:00 AM', '0:65') => [
-    0,  // Hour after treatment
-    5,  // Minute after treatment
-    0,  // Number of crossing the date
-    0,  // Number of switches between AM and PM
+      0,  // Hour after treatment
+      5,  // Minute after treatment
+      0,  // Number of crossing the date
+      0,  // Number of switches between AM and PM
   ] => '12:05 AM'
 
 (ex)
   add_time('11:00 AM', '20:05', 'Monday') => [
-    7,  // Hour after treatment
-    5,  // Minute after treatment
-    1,  // Number of crossing the date
-    2,  // Number of switches between AM and PM
-    2,  // Sunday: 0, ... Saturday: 6
+      7,  // Hour after treatment
+      5,  // Minute after treatment
+      1,  // Number of crossing the date
+      2,  // Number of switches between AM and PM
+      2,  // Sunday: 0, ... Saturday: 6
   ] => '7:05 AM, Tuesday (next day)'
 
 (ex)
   add_time('11:00 PM', '0:05') => [
-   11,  // Hour after treatment
-    5,  // Minute after treatment
-    0,  // Number of crossing the date
-    0,  // Number of switches between AM and PM
+     11,  // Hour after treatment
+      5,  // Minute after treatment
+      0,  // Number of crossing the date
+      0,  // Number of switches between AM and PM
   ] => '11:05 PM'
   
 (ex)
   add_time('11:00 PM', '10:05') => [
-    9,  // Hour after treatment
-    5,  // Minute after treatment
-    1,  // Number of crossing the date
-    1,  // Number of switches between AM and PM
+      9,  // Hour after treatment
+      5,  // Minute after treatment
+      1,  // Number of crossing the date
+      1,  // Number of switches between AM and PM
   ] => '9:05 AM (next day)'
   
 (ex)
   add_time('11:00 PM', '20:05') => [
-    7,  // Hour after treatment
-    5,  // Minute after treatment
-    1,  // Number of crossing the date
-    2,  // Number of switches between AM and PM
+      7,  // Hour after treatment
+      5,  // Minute after treatment
+      1,  // Number of crossing the date
+      2,  // Number of switches between AM and PM
   ] => '7:05 PM (next day)'
   
 (ex)
   add_time('11:00 PM', '0:65') => [
-    0,  // Hour after treatment
-    5,  // Minute after treatment
-    1,  // Number of crossing the date
-    0,  // Number of switches between AM and PM
+      0,  // Hour after treatment
+      5,  // Minute after treatment
+      1,  // Number of crossing the date
+      0,  // Number of switches between AM and PM
   ] => '12:05 PM (next day)'
 
 (ex)
   add_time('11:00 PM', '0:65', 'Monday') => [
-    7,  // Hour after treatment
-    5,  // Minute after treatment
-    1,  // Number of crossing the date
-    2,  // Number of switches between AM and PM
-    2,  // Sunday: 0, ... Saturday: 6
+      7,  // Hour after treatment
+      5,  // Minute after treatment
+      1,  // Number of crossing the date
+      2,  // Number of switches between AM and PM
+      2,  // Sunday: 0, ... Saturday: 6
   ] => '12:05 PM, Tuesday (next day)'
 '''
 
